@@ -458,7 +458,6 @@ function AppRoutes() {
     <Routes>
       <Route path="/login" element={<AuthPageWrapper />} />
       <Route path="/*" element={
-        <ProtectedRoute>
           <MainLayout currentPage={currentPage}>
             <Routes>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
@@ -474,7 +473,6 @@ function AppRoutes() {
               <Route path="/settings" element={<SettingsWrapper />} />
             </Routes>
           </MainLayout>
-        </ProtectedRoute>
       } />
     </Routes>
   );
